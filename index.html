@@ -1,0 +1,150 @@
+HTML
+<!--
+Descricao: DW-aula-8-javascript-e-formularios
+nome_arquivo: index.html
+nome_exercicio: formulário e javascript - tudo oque foi passado em aula
+nome_aluno: Diego Augusto Ângelo
+email_aluno: diego.angelo@aluno.cps.sp.gov.br
+turma: WEBI-ISW028-A
+-->
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Desafios Web - DOM, Eventos e Validação</title>
+  <link rel="stylesheet" href="estilos/style.css" />
+</head>
+<body>
+  <main class="container">
+    <h1>Desafios de Desenvolvimento Web</h1>
+
+    <!-- Desafio 1: Contador de Comentário -->
+    <section class="card">
+      <h2>1. Comentário com limite de caracteres</h2>
+      <label for="comentario">Comentário:</label>
+      <textarea id="comentario" maxlength="140" rows="3" placeholder="Escreva algo..."></textarea>
+      <p id="contador" class="contador">140</p>
+      <button type="button" id="btn-enviar-comentario">Enviar</button>
+    </section>
+
+    <!-- Desafio 2: Validação de Senha -->
+    <section class="card">
+      <h2>2. Confirmação de senha</h2>
+      <label for="senha">Senha:</label>
+      <input type="password" id="senha" placeholder="Digite a senha" />
+
+      <label for="confirma-senha">Confirme sua senha:</label>
+      <input type="password" id="confirma-senha" placeholder="Repita a senha" />
+
+      <p id="msg-senha" class="feedback"></p>
+      <button type="button" id="btn-cadastrar" disabled>Cadastrar</button>
+    </section>
+
+    <!-- Desafio 3: Formulário de Pedido -->
+    <section class="card">
+      <h2>3. Pedido</h2>
+      <label for="produto-pedido">Produto:</label>
+      <select id="produto-pedido">
+        <option value="100">Teclado - R$ 100,00</option>
+        <option value="50">Mouse - R$ 50,00</option>
+        <option value="800">Monitor - R$ 800,00</option>
+      </select>
+
+      <label for="quantidade">Quantidade:</label>
+      <input type="number" id="quantidade" min="1" value="1" />
+
+      <p id="total-pedido" class="destaque">Total: R$ 100,00</p>
+    </section>
+
+    <!-- Desafio 4: Cadastro de Produto para JSON -->
+    <section class="card">
+      <h2>4. Cadastro de produto (JSON)</h2>
+      <form id="form-produto">
+        <label for="prod-nome">Nome:</label>
+        <input type="text" id="prod-nome" required />
+
+        <label for="prod-categoria">Categoria:</label>
+        <input type="text" id="prod-categoria" required />
+
+        <label for="prod-preco">Preço:</label>
+        <input type="number" id="prod-preco" step="0.01" required />
+
+        <button type="submit">Gerar JSON</button>
+      </form>
+      <pre id="resultado-json" class="json-box"></pre>
+    </section>
+
+    <!-- Desafio 5: Máscara de Telefone -->
+    <section class="card">
+      <h2>5. Telefone</h2>
+      <label for="telefone">Telefone:</label>
+      <input type="text" id="telefone" placeholder="(11) 99999-9999" maxlength="15" />
+    </section>
+
+    <!-- Desafio 6: Selects Dependentes -->
+    <section class="card">
+      <h2>6. Departamento e funcionário</h2>
+      <label for="departamento">Departamento:</label>
+      <select id="departamento">
+        <option value="">Selecione...</option>
+        <option value="TI">TI</option>
+        <option value="RH">RH</option>
+      </select>
+
+      <label for="funcionario">Funcionário:</label>
+      <select id="funcionario" disabled>
+        <option value="">Escolha um departamento primeiro</option>
+      </select>
+    </section>
+
+    <!-- Desafio 7: Badges de Habilidades -->
+    <section class="card">
+      <h2>7. Habilidades</h2>
+      <div class="linha-inline">
+        <input type="text" id="input-habilidade" placeholder="Ex: JavaScript" />
+        <button type="button" id="btn-add-habilidade">+</button>
+      </div>
+      <div id="lista-habilidades" class="badges"></div>
+    </section>
+
+    <!-- Desafio 8: Validação de Idade (+18) -->
+    <section class="card">
+      <h2>8. Data de nascimento</h2>
+      <label for="data-nascimento">Data de nascimento:</label>
+      <input type="date" id="data-nascimento" />
+      <p id="aviso-idade" class="feedback"></p>
+      <button type="button" id="btn-finalizar" disabled>Finalizar Cadastro</button>
+    </section>
+
+    <!-- Desafio 9: Selecionar Todos -->
+    <section class="card">
+      <h2>9. Checkboxes</h2>
+      <label class="checkbox-item">
+        <input type="checkbox" id="selecionar-todos" />
+        <strong>Selecionar Todos</strong>
+      </label>
+      <hr />
+      <div id="grupo-itens" class="lista-checks">
+        <label class="checkbox-item"><input type="checkbox" class="item-check" /> Item 1</label>
+        <label class="checkbox-item"><input type="checkbox" class="item-check" /> Item 2</label>
+        <label class="checkbox-item"><input type="checkbox" class="item-check" /> Item 3</label>
+        <label class="checkbox-item"><input type="checkbox" class="item-check" /> Item 4</label>
+        <label class="checkbox-item"><input type="checkbox" class="item-check" /> Item 5</label>
+      </div>
+    </section>
+
+    <!-- Desafio 10: Dark Mode com localStorage -->
+    <section class="card">
+      <h2>10. Configurações de perfil</h2>
+      <label class="checkbox-item">
+        <input type="checkbox" id="toggle-dark" />
+        <span>Ativar Dark Mode</span>
+      </label>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
