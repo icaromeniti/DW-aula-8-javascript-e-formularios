@@ -1,7 +1,7 @@
 /*
 Descricao: DW-aula-8-javascript-e-formularios
 nome_arquivo: script.js
-nome_exercicio: formulário e javascript - tudo oque foi passado em aula
+nome_exercicio: formulário e javascript - tudo o que foi passado em aula
 nome_aluno: Diego Augusto Ângelo
 email_aluno: diego.angelo@aluno.cps.sp.gov.br
 turma: WEBI-ISW028-A
